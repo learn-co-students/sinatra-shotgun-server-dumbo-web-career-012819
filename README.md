@@ -2,13 +2,13 @@
 
 ## Overview
 
-This lesson will introduce you to Shotgun and how to use it with Sinatra apps. We'll also cover troubleshooting common problems that you might encounter when running Shotgun. 
+This lesson will introduce you to Shotgun and how to use it with Sinatra apps. We'll also cover troubleshooting common problems that you might encounter when running Shotgun.
 
 ## Objectives
 
-1. Explain how using `rackup` to start a Sinatra application will only read the code once at boot 
+1. Explain how using `rackup` to start a Sinatra application will only read the code once at boot
 2. Describe how Shotgun allows for automatic code reloading
-3. Install Shotgun and require it in an application's `Gemfile` 
+3. Install Shotgun and require it in an application's `Gemfile`
 4. Start and stop a Rack or Sinatra application with Shotgun
 5. Troubleshoot common Shotgun problems, including "command not found," "bundler error," and "port in use."
 
@@ -31,11 +31,11 @@ When starting an application with `rackup`, our application code is read once on
 Now add some more text to the string in the controller action:
 
 ```ruby
-  get '/' do 
+  get '/' do
     "Welcome to your app!!!! I BUILT THIS!"
   end
 ```
-Refresh the page in the browser. You should still see `Welcome to your app!!!!`. That's because Rack isn't aware that we made changes. You can shut down your server by going back to terminal and hitting `ctrl` + `c`. 
+Refresh the page in the browser. You should still see `Welcome to your app!!!!`. That's because Rack isn't aware that we made changes. You can shut down your server by going back to terminal and hitting `ctrl` + `c`.
 
 Start your server back up by entering `rackup app.rb` and now try visiting `localhost:9292` in the browser. It should work and you should see the text `Welcome to your app!!!! I BUILT THIS!` in your browser window.
 
@@ -112,7 +112,7 @@ $ bundle exec shotgun
 
 ### bundler error
 
-You might get an error about `bundler` that will tell you to run `bundle install`. 
+You might get an error about `bundler` that will tell you to run `bundle install`.
 It'll look like this:
 
 ```
